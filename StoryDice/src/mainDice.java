@@ -14,7 +14,7 @@ public class mainDice
 		System.out.println("Welcome to Story Dice!");
 		System.out.println("You need at least two people in order to play this game!");
 		System.out.println("Write a story based on the 3 pictures you roll and then rate your friends stories!");
-		System.out.println("The person with the highest average score at the end wins!");
+		System.out.println("The person with the highest average score at the end wins and gets a place in the Hall of Winners!");
 
 		
 		// show high scores
