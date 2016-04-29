@@ -1,33 +1,54 @@
 import java.util.*;
+
+/** 
+ * The Dice class for the Story-Dice game. This class takes String arrays with dice and their corresponding symbols
+ * and randomly rolls them and passes them as Rolls to the Player class to be printed/shown in the main
+ * 
+ * @author Ryan Gonzales
+ * 
+ * @version April 29, 2016
+ * 
+ */
+
 public class Dice 
 {
+	// initialize the RollImages and RollWords String array
 	private String[] RollImages;
 	private String[] RollWords;
+	
+	//initialize the 3 dice word arrays
 	private String[] dice1t = {"dog", "flower", "hot air balloon", "airplane" , "sheep", "pyramid"};
 	private String[] dice2t = {"think", "house", "clock", "bee", "book", "fish"};
 	private String[] dice3t = {"bug", "lock", "fire", "question", "compass", "key"};
+	
+	//initialize the three dice picture file location arrays
 	private String[] dice1g = {"src/d1image1.jpg","src/d1image2.jpg","src/d1image3.jpg","src/d1image4.jpg","src/d1image5.jpg","src/d1image6.jpg"};
 	private String[] dice2g = {"src/d2image1.jpg","src/d2image2.jpg","src/d2image3.jpg","src/d2image4.jpg","src/d2image5.jpg","src/d2image6.jpg"};
 	private String[] dice3g = {"src/d3image1.jpg","src/d3image2.jpg","src/d3image3.jpg","src/d3image4.jpg","src/d3image5.jpg","src/d3image6.jpg"};
 	/**
-	 *constructor that creates a dice object that has a string array
-	 *that either contains words depicting images for the text based
-	 *version of the game or the filenames of the images for the gui
-	 *version of the game.
-	 *@param gooey is a boolean that tells the game to either initialize a text based or gui based roll
+	 *constructor that creates 3 random rolls and then creates the two string arrays for Images and Words
 	 */
 	
 	public Dice()
 	{
+		//initialize images and words to size 3
 		RollImages = new String[3];
 		RollWords = new String[3];
-		Random r = new Random();
-		int rand1 = r.nextInt(6);
-		int rand2 = r.nextInt(6);
-		int rand3 = r.nextInt(6);
+		
+		//create the random object to call random
+		Random dicer = new Random();
+		
+		//create 3 random rolls to use in the arrays
+		int rand1 = dicer.nextInt(6);
+		int rand2 = dicer.nextInt(6);
+		int rand3 = dicer.nextInt(6);
+		
+		//put the randomly rolled numbers from the image file array to the RollImages array
 		RollImages[0] = dice1g[rand1];
 		RollImages[1] = dice2g[rand2];
 		RollImages[2] = dice3g[rand3];
+		
+		//put the randomly rolled numbers from the image file array to the RollWords array
 		RollWords[0] = dice1t[rand1];
 		RollWords[1] = dice2t[rand2];
 		RollWords[2] = dice3t[rand3];
@@ -35,21 +56,29 @@ public class Dice
 	}
 	/**
 	 * This simple getter method returns the roll
-	 * @return returns the string array of the roll results for use by other classes
+	 * @return returns the string array of the roll Images file locations
 	 */
-	public String[] getRollImages(){
+	public String[] getRollImages()
+	{
 		return RollImages;
 	}
 	
+	/**
+	 * This simple getter method returns the roll
+	 * @return returns the string array of the roll Images file locations
+	 */
 	public String[] getRollWords()
 	{
 		return RollWords;
 	}
 	
+	/**
+	 * This simple getter method returns the roll
+	 * @return returns the string array of the roll Images file locations
+	 * @parameter index to get the index for the images
+	 */
 	public String getRollImages(int index)
 	{
 		return RollImages[index];
 	}
-	
-	
 }
