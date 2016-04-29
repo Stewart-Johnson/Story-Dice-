@@ -31,7 +31,7 @@ public class Player {
 		name = "";
 		flag[0] = false;
 		story = "".toCharArray();
-		roll = new Dice(false);
+		roll = new Dice();
 		score = 0;
 		
 	}
@@ -41,7 +41,7 @@ public class Player {
 		name = nm;
 		flag[0] = false;
 		story = "".toCharArray();
-		roll = new Dice(false);
+		roll = new Dice();
 		score = 0;
 		count = 0;
 		
@@ -155,7 +155,7 @@ public class Player {
 	
 	public String[] getRoll() {
 		
-		return roll.getRoll();
+		return roll.getRollImages();
 		
 	}
 	
@@ -171,7 +171,7 @@ public class Player {
 	
 	public String getRoll(int index) {
 		
-		return roll.getRoll(index);
+		return roll.getRollImages(index);
 		
 	}
 	
