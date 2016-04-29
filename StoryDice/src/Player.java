@@ -36,6 +36,14 @@ public class Player {
 		
 	}
 	
+	/** 
+	 * The constructor method for the Player class, which initializes all parameters to
+	 * their default values. It takes in a name as well.
+	 * 
+	 * @param nm The name of the new player.
+	 * 
+	 */
+	
 	public Player(String nm) {
 		
 		name = nm;
