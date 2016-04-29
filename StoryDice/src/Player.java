@@ -3,9 +3,9 @@
  * each individual player and has the ability to set and get those data as needed during
  * the course of the game.
  * 
- * @author Samuel Friedman
+ * @author Samuel Friedman, Ryan Gonzalez
  * 
- * @version April 15, 2016
+ * @version April 29, 2016
  * 
  */
 
