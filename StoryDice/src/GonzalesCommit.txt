@@ -1,6 +1,0 @@
-Story ID	Story name				Status		Size	Priority	Comments
-1			Player Log-in			Planned		1		
-2			Dice Roll				Planned		2		
-3			Story Text				Planned		2		
-4			Story Rating			Planned		2		
-5			View Previous Stories	Planned		3		
