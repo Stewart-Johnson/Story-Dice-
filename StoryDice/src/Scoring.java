@@ -1,39 +1,36 @@
 public class Scoring
 {
-	static boolean[] scoreFlags;
-	static int[] Score;
-	public Scoring(int numPlayers)
+	static int totalScore;
+	static int scoreNum;
+	static double average;
+	public Scoring()
 	{
-		Score = new int[numPlayers];
-		scoreFlags = new boolean[numPlayers];
+		totalScore = 0;
+		scoreNum = 0;
+		average = 0.0;
 		
 	}
 	
-	static public void setScore(int score, int index)
+	static public void setScore(int scoreEntered)
 	{
-		//either implement or call a search function
-		//which returns the index in our name Array
-		Score[index] = score;
-		setFlag(index, true);		
+		totalScore += scoreEntered;
+		scoreNum += 1;
 	}
 	
-	static public int getScore(int index)
+	static public int getTotalScore()
 	{
-		//implement search to return index from name
-		setFlag(index, true);
-		return Score[index];
+		return totalScore;
 		
 	}
 	
-	static public void setFlag(int index, boolean flagValue)
+	static public int getScoreNum()
 	{
-		scoreFlags[index] = flagValue;
+		return scoreNum;
 	}
 
-	static public boolean getFlag(int index)
+	static public double getAverage()
 	{
-		//again depending on search finds name
-		//and returns the index
-		return scoreFlags[index];
+		average = totalScore/scoreNum;
+		return average;
 	}
 }
