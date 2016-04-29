@@ -76,34 +76,6 @@ public class Player {
 	}
 	
 	/** 
-	 * Set the boolean flag value for a specific story number to true.
-	 * 
-	 * @param storyNumber the number of the story to flag
-	 *  
-	 */
-	
-	public void setFlag(int storyNumber) {
-		
-		flag[storyNumber] = true;
-		
-	}
-	
-	/** 
-	 * Get the flag for this player of a specific story.
-	 * 
-	 * @param storyNumber the index of the story to be checked
-	 * 
-	 * @return the state of the flag (true or false) of a specified index
-	 *  
-	 */
-	
-	public boolean getFlag(int storyNumber) {
-		
-		return flag[storyNumber];
-		
-	}
-	
-	/** 
 	 * Set the story for the player to a specified String. This class uses a char array
 	 * for purposes of ensuring that only 140 characters are stored. If the String
 	 * given is more than 140 characters, an error is displayed and -1 is returned. 
@@ -173,9 +145,7 @@ public class Player {
 		
 		return roll.getRollImages(index);
 		
-	}
-	
-	
+	}	
 	
 	/** 
 	 * Add a score to the player's current score using the Scoring class.
@@ -189,10 +159,19 @@ public class Player {
 		score += newScore;
 	}
 	
+	/**
+	 * Set the number of rounds and players so we know how many ratings this
+	 * player's story will get.
+	 * 
+	 * @param numRounds The number of rounds for the game.
+	 * @param numPlayers The number of players competing in the game.
+	 */
+	
 	public void setCount(int numRounds, int numPlayers)
 	{
 		count = (numPlayers-1)*(numRounds);
 	}
+	
 	/** 
 	 * Get the player's average score.
 	 * 
@@ -208,4 +187,3 @@ public class Player {
 		
 	}
 }
-	
