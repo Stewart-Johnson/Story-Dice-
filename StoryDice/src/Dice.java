@@ -26,11 +26,11 @@ public class Dice
 		int rand2 = r.nextInt(6);
 		int rand3 = r.nextInt(6);
 		RollImages[0] = dice1g[rand1];
-		RollImages[1] = dice1g[rand2];
-		RollImages[2] = dice1g[rand3];
+		RollImages[1] = dice2g[rand2];
+		RollImages[2] = dice3g[rand3];
 		RollWords[0] = dice1t[rand1];
-		RollWords[1] = dice1t[rand2];
-		RollWords[2] = dice1t[rand3];
+		RollWords[1] = dice2t[rand2];
+		RollWords[2] = dice3t[rand3];
 		
 	}
 	/**
