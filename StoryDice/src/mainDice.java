@@ -1,9 +1,8 @@
-
+package storydice;
 import java.util.*;
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.*;
+import java.io.*;
 
 public class mainDice
 {
@@ -12,6 +11,46 @@ public class mainDice
 	static int numRounds = 1;
 	public static void main(String[] args)
 	{
+		
+		// show high scores
+		
+		System.out.println("Hall of Winners:");
+		System.out.println();
+		
+		// The name of the file to open.
+        String fileName = "src/storydice/winners.txt";
+
+        // This will reference one line at a time
+        String line = null;
+
+        try {
+            // FileReader reads text files in the default encoding.
+            FileReader fileReader = 
+                new FileReader(fileName);
+
+            // Always wrap FileReader in BufferedReader.
+            BufferedReader bufferedReader = 
+                new BufferedReader(fileReader);
+
+            while((line = bufferedReader.readLine()) != null) {
+                System.out.println(line);
+            }   
+
+            // Always close files.
+            bufferedReader.close();
+            System.out.println();
+        }
+        catch(FileNotFoundException ex) {
+                          
+        }
+        catch(IOException ex) {
+            System.out.println(
+                "Error reading file '" 
+                + fileName + "'");                  
+            // Or we could just do this: 
+            // ex.printStackTrace();
+        }
+		
 		//get number of players from console
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Please enter number of players");
@@ -114,14 +153,45 @@ public static void playGame(Player[] player, int numPlayers, int numRounds)
 		else
 		{
 			System.out.println("Final Score is: ");
+			int max = 0;
 			for(int index = 0; index < numPlayers; index++)
 			{
+				if (player[index].getScore() > max) {
+					max = index;
+				}
 				player[index].setCount(numRounds, numPlayers);
 				System.out.println(player[index].getName() + "'s Score is: " + Double.toString(player[index].getScore()));
 			}
+			
+			// file
+			
+			 // The name of the file to open.
+	        String fileName = "src/storydice/winners.txt";
+
+	        try {
+	            // Assume default encoding.
+	            FileWriter fileWriter =
+	                new FileWriter(fileName, true);
+
+	            // Always wrap FileWriter in BufferedWriter.
+	            BufferedWriter bufferedWriter =
+	                new BufferedWriter(fileWriter);
+
+	            // Note that write() does not automatically
+	            // append a newline character.
+	            bufferedWriter.write(player[max].getName() + ": " + player[max].getScore());
+	            bufferedWriter.newLine();
+
+	            // Always close files.
+	            bufferedWriter.close();
+	        }
+	        catch(IOException ex) {
+	            ex.printStackTrace();
+	        }
+			
 			return;
 		}
-}			
+	}	
 			
 			
 }	
