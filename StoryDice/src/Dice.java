@@ -1,11 +1,11 @@
-package Stewart;
+
 import java.util.*;
 
 /** 
  * The Dice class for the Story-Dice game. This class takes String arrays with dice and their corresponding symbols
  * and randomly rolls them and passes them as Rolls to the Player class to be printed/shown in the main
  * 
- * @author Ryan Gonzales
+ * @author Ryan Gonzales Stewart Johnson
  * 
  * @version April 29, 2016
  * 
