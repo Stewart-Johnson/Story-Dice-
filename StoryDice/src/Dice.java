@@ -1,3 +1,4 @@
+package Stewart;
 import java.util.*;
 
 /** 
@@ -22,9 +23,9 @@ public class Dice
 	private String[] dice3t = {"bug", "lock", "fire", "question", "compass", "key"};
 	
 	//initialize the three dice picture file location arrays
-	private String[] dice1g = {"src/d1image1.jpg","src/d1image2.jpg","src/d1image3.jpg","src/d1image4.jpg","src/d1image5.jpg","src/d1image6.jpg"};
-	private String[] dice2g = {"src/d2image1.jpg","src/d2image2.jpg","src/d2image3.jpg","src/d2image4.jpg","src/d2image5.jpg","src/d2image6.jpg"};
-	private String[] dice3g = {"src/d3image1.jpg","src/d3image2.jpg","src/d3image3.jpg","src/d3image4.jpg","src/d3image5.jpg","src/d3image6.jpg"};
+	private String[] dice1g = {"src/img/d1image1.jpg","src/img/d1image2.jpg","src/img/d1image3.jpg","src/img/d1image4.jpg","src/img/d1image5.jpg","src/img/d1image6.jpg"};
+	private String[] dice2g = {"src/img/d2image1.jpg","src/img/d2image2.jpg","src/img/d2image3.jpg","src/img/d2image4.jpg","src/img/d2image5.jpg","src/img/d2image6.jpg"};
+	private String[] dice3g = {"src/img/d3image1.jpg","src/img/d3image2.jpg","src/img/d3image3.jpg","src/img/d3image4.jpg","src/img/d3image5.jpg","src/img/d3image6.jpg"};
 	/**
 	 *constructor that creates 3 random rolls and then creates the two string arrays for Images and Words
 	 */
